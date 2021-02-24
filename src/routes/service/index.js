@@ -4,6 +4,7 @@ import create from "../../modules/service/controllers/create";
 import services from "../../modules/service/controllers/services";
 import search from "../../modules/service/controllers/search";
 import edit from "../../modules/service/controllers/edit";
+import detail from "../../modules/service/controllers/detail";
 
 import { isLoggedIn } from "../../helpers/middlewares";
 
