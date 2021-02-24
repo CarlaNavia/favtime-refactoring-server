@@ -5,7 +5,7 @@ const serviceTypeSchema = new Schema(
   {
     title: { type: String, required: true },
     iconCode: Number,
-    services: [{ type: Schema.Types.ObjectId, ref: "Service" }],
+   
   },
   {
     timestamps: {

@@ -1,4 +1,5 @@
 import ServiceModel from "../../../models/service";
+import ServiceTypeModel from "../../../models/serviceType"
 
 class ServiceRepository {
   findById(id) {
@@ -7,6 +8,7 @@ class ServiceRepository {
   createAService(newService) {
     return ServiceModel.create(newService);
   }
+
   getAllServices() {
     return ServiceModel.find();
   }

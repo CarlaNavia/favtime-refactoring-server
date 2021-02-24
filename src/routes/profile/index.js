@@ -1,13 +1,13 @@
-import express from "express";
+// import express from "express";
 
-import { isLoggedIn } from "../../helpers/middlewares";
+// import { isLoggedIn } from "../../helpers/middlewares";
 
-const router = express.Router();
+// const router = express.Router();
 
-router.put("/profile/:id", isLoggedIn(), profile);
+// router.put("/profile/:id", isLoggedIn(), profile);
 
-router.post("/buy", isLoggedIn(), credits);
+// router.post("/buy", isLoggedIn(), credits);
 
-router.get("/profile/:id/services", isLoggedIn(), services)
+// router.get("/profile/:id/services", isLoggedIn(), services)
 
-export default router;
+// export default router;
