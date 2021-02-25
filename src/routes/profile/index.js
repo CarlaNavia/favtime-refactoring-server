@@ -8,6 +8,4 @@
 
 // router.post("/buy", isLoggedIn(), credits);
 
-// router.get("/profile/:id/services", isLoggedIn(), services)
-
 // export default router;

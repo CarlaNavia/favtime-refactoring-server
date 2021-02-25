@@ -16,5 +16,8 @@ class ServiceRepository {
   searchByText(text) {
     return ServiceModel.find({ title: { $regex: text, $options: "i" } });
   }
+  getAllMyServicesAsOwner(userId) {
+    return ServiceModel.find({ owner: { $in: [userId] } }).populate("type");
+  }
 }
 export default new ServiceRepository();
