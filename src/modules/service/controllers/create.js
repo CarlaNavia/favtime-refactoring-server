@@ -1,6 +1,7 @@
 import ServiceRepository from "../repositories/service";
 
 export default async (req, res, next) => {
+  const userId = req.user.userId
   const {
     title,
     description,
@@ -9,7 +10,6 @@ export default async (req, res, next) => {
     city,
     address,
     credits,
-    owner,
   } = req.body;
   try {
     const newService = await ServiceRepository.createAService({
@@ -20,8 +20,8 @@ export default async (req, res, next) => {
       city,
       address,
       credits,
-      owner,
-    });
+      owner:userId,
+    })
 
     res.status(200).json(newService);
   } catch (error) {
