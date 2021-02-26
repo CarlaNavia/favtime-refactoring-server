@@ -1,5 +1,5 @@
 import express from "express";
-// import remove from "../../modules/service/controllers/remove";
+import remove from "../../modules/service/controllers/remove";
 import create from "../../modules/service/controllers/create";
 // import search from "../../modules/service/controllers/search";
 // import edit from "../../modules/service/controllers/edit";
@@ -20,6 +20,6 @@ router.get("/services/:userId", isLoggedIn(), services);
 
 // router.put("/service/:id", isLoggedIn(), edit);
 
-// router.delete("/service/:id", isLoggedIn(), remove);
+router.delete("/service/:id", isLoggedIn(), remove);
 
 export default router;

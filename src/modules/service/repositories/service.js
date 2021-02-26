@@ -1,4 +1,5 @@
 import ServiceModel from "../../../models/service";
+import BookingModel from "../../../models/booking";
 
 class ServiceRepository {
   findById(id) {
@@ -12,6 +13,9 @@ class ServiceRepository {
   }
   removeAService(serviceId) {
     return ServiceModel.findByIdAndRemove(serviceId);
+  }
+  removeBookingIncludesAService(serviceId) {
+    return BookingModel.deleteMany({ service: { $in: [serviceId] } });
   }
   searchByText(text) {
     return ServiceModel.find({ title: { $regex: text, $options: "i" } });
