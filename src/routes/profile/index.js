@@ -4,8 +4,6 @@
 
 // const router = express.Router();
 
-// router.put("/profile/:id", isLoggedIn(), profile);
-
 // router.post("/buy", isLoggedIn(), credits);
 
 // export default router;
