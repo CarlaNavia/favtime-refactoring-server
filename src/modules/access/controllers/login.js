@@ -15,7 +15,6 @@ export default async (req, res, next) => {
       );
       const payload = {
         userId: userWithoutPass._id,
-        isAdmin: userWithoutPass.isAdmin,
       };
       const token = jwt.sign(payload, SECRET_TOKEN, {
         expiresIn: TOKEN_EXPIRES_IN,

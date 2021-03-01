@@ -9,6 +9,7 @@ export default async (req, res, next) => {
 
     if (!oneBooking) {
       res.status(400).json({ message: "Specified id is not valid" });
+      return;
     }
     if (
       oneBooking.client == req.user.userId &&
